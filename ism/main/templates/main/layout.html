@@ -17,9 +17,11 @@
         <span class="logo">BaseISM</span>
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'doc' %}"><li><i class="far fa-file-alt"></i> Документация</li></a>
+            <a href="{% url 'main' %}"><li><i class="fas fa-house-user"></i> Главная</li></a>
+            <a href="{% url 'documents_main' %}"><li><i class="far fa-file-alt"></i> Документация</li></a>
             <a href="{% url 'contacts'%}"><li><i class="far fa-address-card"></i> Контакты</li></a>
         </ul>
+        <a class="admin" href="{% url 'admin:index' %}"><li> Admin</li></a>
     </aside>
     <main>
     {% block content %}

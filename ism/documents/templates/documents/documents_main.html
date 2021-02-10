@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Документация{% endblock %}
+
+{% block content %}
+    <h1>Документация</h1>
+
+    {% for el in docs %}
+        <div class="alert alert-warning">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.description }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

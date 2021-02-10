@@ -3,6 +3,7 @@ body {
 }
 
 aside {
+    position:fixed;
     float: left;
     background: #181818;
     width: 20%;
@@ -28,7 +29,7 @@ aside h3 {
     font-size: 28px;
 }
 
-aside ul {
+aside ul, .admin{
     list-style:none;
 }
 
@@ -36,7 +37,7 @@ aside a {
     text-decoration: none;
 }
 
-aside ul li {
+aside ul li, .admin {
     color:#fff;
     display: block;
     margin-top: 20px;
@@ -45,4 +46,59 @@ aside ul li {
 aside ul li:hover, aside ul a:hover {
     color:#5B8DCA;
     transform: scale(1.05);
+}
+
+.admin{
+    position: absolute;
+    bottom: 10px;
+    left: 90px;
+    color: gray;
+
+}
+
+main{
+    padding: 2.5%;
+    width: 80%;
+    float: right;
+    color: #fff;
+    align: justify;
+
+}
+.main_words{
+    font-size: 30px;
+}
+
+h1 {
+    color:#fff;
+    font-size: 50px;
+    text-align: center;
+
+}
+
+.alert-warning {
+    color: #fff;
+    text-align:center;
+    background: #5B8DCA;
+    width: 1000px;
+    margin: 20px auto;
+    text-align:left;
+    border: solid
+
+}
+
+.alert-warning h3, p{
+    text-align:center;
+}
+
+.cnt {
+    margin: 50px;
+    color:#fff;
+    text-align:center;
+    font-size: 30px;
+}
+
+
+.cnt i{
+    margin-left: 10px;
+
 }
