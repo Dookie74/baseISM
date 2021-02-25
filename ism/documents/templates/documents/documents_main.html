@@ -5,10 +5,21 @@
 {% block content %}
     <h1>Документация</h1>
 
-    {% for el in docs %}
-        <div class="alert alert-warning">
-            <h3>{{ el.title }}</h3>
-            <p>{{ el.description }}</p>
-        </div>
-    {% endfor %}
+
+        <table class="alert">
+            <tr>
+                <th><h3>Название</h3></th>
+                <th><h3>Описание</h3></th>
+                <th><h3></h3></th>
+            </tr>
+            {% for el in docs %}
+            <tr>
+                <th><h4>{{ el.title }}</h4></th>
+                <th><p>{{ el.description }}</p></th>
+                <th><a href="{% url 'doc_detail' el.id %}" class="btn btn-warning">Подробнее</a></th>
+
+            </tr>
+            {% endfor %}
+        </table>
+
 {% endblock %}

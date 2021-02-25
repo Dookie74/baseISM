@@ -13,15 +13,30 @@
 </head>
 <body>
     <aside>
-        <img src="{% static 'main/img/susu.png' %}" alt="susu">
-        <span class="logo">BaseISM</span>
+        <img src="{% static 'main/img/susu1.png' %}" alt="susu">
+
+        <p class="logo">BaseISM</p>
+
+        {% if request.user.is_authenticated %}
         <h3>Навигация</h3>
         <ul>
             <a href="{% url 'main' %}"><li><i class="fas fa-house-user"></i> Главная</li></a>
+
             <a href="{% url 'documents_main' %}"><li><i class="far fa-file-alt"></i> Документация</li></a>
+
             <a href="{% url 'contacts'%}"><li><i class="far fa-address-card"></i> Контакты</li></a>
+            {% if request.user.is_superuser %}
+            <a  href="{% url 'admin:index' %}"><li><i class="fas fa-user-shield"></i> Admin</li></a>
+            {% endif %}
         </ul>
-        <a class="admin" href="{% url 'admin:index' %}"><li> Admin</li></a>
+        {% endif %}
+
+        {% if request.user.is_authenticated %}
+        <div class="user">
+            <h6> {{ request.user.first_name }} {{ request.user.last_name }} | <a href="{% url 'logout' %}">Выход</a></h6>
+        </div>
+
+        {% endif %}
     </aside>
     <main>
     {% block content %}
