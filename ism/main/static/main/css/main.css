@@ -17,11 +17,10 @@ aside {
     border-right: 5px solid #4d4d4d;
 }
 
-.loginwrp{
+.loginwrp {
     background: #181818;
     color: #fff;
     width: 20%;
-
     border: 5px solid #4d4d4d;
     padding: 40px;
     margin:10% auto;
@@ -29,6 +28,7 @@ aside {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-radius: 20px;
 
 }
 .loginwrp img {
@@ -58,7 +58,11 @@ aside h3 {
     font-size: 28px;
 }
 
-aside a {
+aside a{
+    text-decoration: none;
+}
+.dowld {
+    color:#fff;
     text-decoration: none;
 }
 
@@ -68,10 +72,11 @@ aside ul li {
     margin-top: 20px;
 }
 
-aside ul li:hover, aside ul a:hover {
+aside ul li:hover, aside ul a:hover  {
     color:#5B8DCA;
     transform: scale(1.05);
 }
+
 
 .admin{
     position: absolute;
